@@ -17,8 +17,12 @@ then
   mv ~/.zshrc ~/.zshrc.pre-oh-my-zsh;
 fi
 
-echo "\033[0;34mUsing the Oh My Zsh template file and adding it to ~/.zshrc\033[0m"
-cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
+echo "\033[0;34mUsing the Oh My Zsh custom dot files\033[0m"
+cp ~/.oh-my-zsh/templates/.zshrc  ~/.zshrc
+cp ~/.oh-my-zsh/templates/.alias  ~/.alias
+cp ~/.oh-my-zsh/templates/.gemrc  ~/.gemrc
+cp ~/.oh-my-zsh/templates/.railsrc  ~/.railsrc
+
 
 echo "\033[0;34mCopying your current PATH and adding it to the end of ~/.zshrc for you.\033[0m"
 echo "export PATH=$PATH" >> ~/.zshrc
@@ -33,6 +37,14 @@ echo "\033[0;32m"'/ /_/ / / / /  / / / / / / /_/ /    / /_(__  ) / / / '"\033[0m
 echo "\033[0;32m"'\____/_/ /_/  /_/ /_/ /_/\__, /    /___/____/_/ /_/  '"\033[0m"
 echo "\033[0;32m"'                        /____/                       '"\033[0m"
 
+
+
+echo "Installing bundle-exec alias"
+curl -L https://github.com/gma/bundler-exec/raw/master/bundler-exec.sh > ~/.bundler-exec.sh
+
+
 echo "\n\n \033[0;32m....is now installed.\033[0m"
 /usr/bin/env zsh
 source ~/.zshrc
+
+
