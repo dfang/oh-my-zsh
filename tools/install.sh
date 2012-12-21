@@ -27,9 +27,6 @@ echo '.gemrc copied'
 cp ~/.oh-my-zsh/templates/.railsrc  ~/.railsrc
 echo '.railsrc copied'
 
-echo "Installing bundle-exec alias"
-curl -L https://github.com/gma/bundler-exec/raw/master/bundler-exec.sh > ~/.bundler-exec.sh
-
 echo "\033[0;34mTime to change your default shell to zsh!\033[0m"
 chsh -s `which zsh`
 
