@@ -7,6 +7,7 @@ bwana
 cake
 colemak
 compleat
+composer
 svn
 symfony
 symfony2
@@ -44,7 +45,6 @@ done
 # cloudapp
 # coffee
 # command-not-found
-# composer
 # cp
 # debian
 # dircycle
