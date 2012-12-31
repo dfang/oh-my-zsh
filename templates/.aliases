@@ -7,6 +7,19 @@ alias gd='git diff'
 alias gdc='git diff --cached'
 alias gds='git diff --stat'
 
+# list just files
+alias lf='ls *(.)'
+# list just directories *N*
+alias ld='ls *(/)'
+
+# To list only matching dot files , add -maxdepth 1 to not walk into path recursively
+# find . -type f -name ".*" -maxdepth 1
+
+# To list only matching dot directories
+$ find . -type d -name ".*" -maxdepth 1
+
+
+
 alias tlog='tail -f log/development.log'  # tail log
 alias ctlog='cp /dev/null log/development.log && tail -f log/development.log' # clear and tail log
 alias devlog='tail -f log/development.log'
