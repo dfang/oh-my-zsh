@@ -1,0 +1,9 @@
+[user]
+  name = 
+  email = 
+[mergetool]
+  keepBackup = true
+[color]
+  diff = auto
+  status = auto
+  branch = auto

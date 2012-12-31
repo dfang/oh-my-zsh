@@ -6,7 +6,34 @@ alias bu="bundle update"
 
 # The following is based on https://github.com/gma/bundler-exec
 
-bundled_commands=(annotate cap capify cucumber foreman guard middleman nanoc rackup rainbows rake rspec ruby shotgun spec spork thin thor unicorn unicorn_rails puma zeus)
+bundled_commands=(annotate
+cap
+capify
+cucumber
+foreman
+guard
+haml
+heroku
+html2haml
+jasmine
+middleman
+nanoc
+rackup
+rainbows
+rake
+rspec
+ruby
+sass
+shotgun
+spec
+spork
+thin
+thor
+unicorn
+unicorn_rails
+puma
+zeus
+)
 
 ## Functions
 
@@ -37,6 +64,6 @@ for cmd in $bundled_commands; do
   alias $cmd=bundled_$cmd
 
   if which _$cmd > /dev/null 2>&1; then
-        compdef _$cmd bundled_$cmd=$cmd
+    compdef _$cmd bundled_$cmd=$cmd
   fi
 done

@@ -1,0 +1,12 @@
+Related posts:
+
+https://github.com/myfreeweb/zshuery
+http://grml.org/zsh/zsh-lovers.html
+http://friedcpu.wordpress.com/2007/07/24/zsh-the-last-shell-youll-ever-need/
+http://www.refining-linux.org/archives/59/ZSH-Gem-24-ZSH-frameworks/
+
+
+# about speed up
+http://marc-abramowitz.com/archives/2012/04/10/fix-for-oh-my-zsh-git-svn-prompt-slowness/
+# http://osxdaily.com/2010/05/06/speed-up-a-slow-terminal-by-clearing-log-files
+alias speedup='sudo rm /private/var/log/asl/＊.asl'

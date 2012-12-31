@@ -20,7 +20,7 @@ fi
 echo "\033[0;34mUsing the Oh My Zsh custom dot files\033[0m"
 cp ~/.oh-my-zsh/templates/.zshrc  ~/.zshrc
 echo '.zshrc copied'
-cp ~/.oh-my-zsh/templates/.alias  ~/.alias
+cp ~/.oh-my-zsh/templates/.aliases  ~/.aliases
 echo '.alias copied'
 cp ~/.oh-my-zsh/templates/.gemrc  ~/.gemrc
 echo '.gemrc copied'
