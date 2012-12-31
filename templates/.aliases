@@ -16,7 +16,7 @@ alias ld='ls *(/)'
 # find . -type f -name ".*" -maxdepth 1
 
 # To list only matching dot directories
-$ find . -type d -name ".*" -maxdepth 1
+# find . -type d -name ".*" -maxdepth 1
 
 
 

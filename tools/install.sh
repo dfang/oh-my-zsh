@@ -18,15 +18,19 @@ then
 fi
 
 echo "\033[0;34mUsing the Oh My Zsh custom dot files\033[0m"
-cp ~/.oh-my-zsh/templates/.zshrc  ~/.zshrc
+ln -s ~/.oh-my-zsh/templates/.zshrc  ~/.zshrc
 echo '.zshrc copied'
-cp ~/.oh-my-zsh/templates/.aliases  ~/.aliases
-echo '.alias copied'
-cp ~/.oh-my-zsh/templates/.gemrc  ~/.gemrc
+ln -s ~/.oh-my-zsh/templates/.aliases  ~/.aliases
+echo '.aliases copied'
+ln -s ~/.oh-my-zsh/templates/.gemrc  ~/.gemrc
 echo '.gemrc copied'
-cp ~/.oh-my-zsh/templates/.railsrc  ~/.railsrc
+ln -s ~/.oh-my-zsh/templates/.railsrc  ~/.railsrc
 echo '.railsrc copied'
-
+ln -s ~/.oh-my-zsh/templates/.gitconfig  ~/.gitconfig
+echo '.gitconfig copied'
+echo 'please config your git username and email, like '
+echo "$ git config --global user.name 'John Doe'"
+echo "git config --global user.email johndoe@example.com"
 
 echo "\033[0;34mCopying your current PATH and adding it to the end of ~/.zshrc for you.\033[0m"
 echo "export PATH=$PATH" >> ~/.zshrc
