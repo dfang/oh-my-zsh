@@ -38,6 +38,7 @@ alias sz="source ~/.zshrc"
 
 alias r='rails'
 alias g='git'
+alias h='history'
 alias o='open'
 alias t='tail -f'
 alias v='vagrant'
