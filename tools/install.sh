@@ -18,7 +18,7 @@ then
 fi
 
 echo "\033[0;34mUsing the Oh My Zsh custom dot files\033[0m"
-ln -s ~/.oh-my-zsh/templates/.zshrc  ~/.zshrc
+ln cp ~/.oh-my-zsh/templates/.zshrc  ~/.zshrc
 echo '.zshrc copied'
 ln -s ~/.oh-my-zsh/templates/.aliases  ~/.aliases
 echo '.aliases copied'
@@ -33,6 +33,7 @@ echo "$ git config --global user.name 'John Doe'"
 echo "git config --global user.email johndoe@example.com"
 
 echo "\033[0;34mCopying your current PATH and adding it to the end of ~/.zshrc for you.\033[0m"
+echo " "
 echo "export PATH=$PATH" >> ~/.zshrc
 
 echo "\033[0;34mTime to change your default shell to zsh!\033[0m"

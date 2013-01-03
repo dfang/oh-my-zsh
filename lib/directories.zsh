@@ -3,12 +3,18 @@ setopt auto_name_dirs
 setopt auto_pushd
 setopt pushd_ignore_dups
 
+# Push and pop directories on directory stack
+alias pu='pushd'
+alias po='popd'
+
 alias ..='cd ..'
 alias cd..='cd ..'
 alias cd...='cd ../..'
 alias cd....='cd ../../..'
 alias cd.....='cd ../../../..'
 alias cd/='cd /'
+alias ...='cd ../..'
+alias -- -='cd -'
 
 alias 1='cd -'
 alias 2='cd +2'
@@ -19,6 +25,14 @@ alias 6='cd +6'
 alias 7='cd +7'
 alias 8='cd +8'
 alias 9='cd +9'
+
+# List direcory contents
+alias lsa='ls -lah'
+alias l='ls -lA1'
+alias ll='ls -l'
+alias la='ls -lA'
+alias sl=ls # often screw this up
+
 
 cd () {
   if   [[ "x$*" == "x..." ]]; then
