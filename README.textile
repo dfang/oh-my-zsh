@@ -17,4 +17,4 @@ h4. via `wget`
 pls use this in ubuntu, https://gist.github.com/1498393
 
 @sudo apt-get install zsh # install zsh first@
-@wget https://raw.github.com/dfang/oh-my-zsh/master/tools/install.sh -O -| zsh@
+@wget --no-check-certificate https://raw.github.com/dfang/oh-my-zsh/master/tools/install.sh -O -| zsh@

@@ -18,7 +18,7 @@ then
 fi
 
 echo "\033[0;34mUsing the Oh My Zsh custom dot files\033[0m"
-ln cp ~/.oh-my-zsh/templates/.zshrc  ~/.zshrc
+cp ~/.oh-my-zsh/templates/.zshrc  ~/.zshrc
 echo '.zshrc copied'
 ln -s ~/.oh-my-zsh/templates/.aliases  ~/.aliases
 echo '.aliases copied'
