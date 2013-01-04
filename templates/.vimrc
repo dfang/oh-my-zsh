@@ -5,7 +5,7 @@ filetype off                   " required!
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
-"" let Vundle manage Vundle , required! 
+" let Vundle manage bundles , required! 
 Bundle 'gmarik/vundle'
 
 " if exists vimrc.bundles.local file , load it 
@@ -39,8 +39,8 @@ set tabstop=2 softtabstop=2 shiftwidth=2 expandtab
 set incsearch hlsearch ignorecase 
 
 " status line setting
-set laststatus=2
-set statusline=%<%f\ %h%m%r%=[TYPE=%Y]\ [FORMAT=%{&ff}]\ [ENC=%{&enc}]\ [FENC=%{&fenc}]\ %-14.(%l,%c%V%)\ %P
+" set laststatus=2
+" set statusline=%<%f\ %h%m%r%=[TYPE=%Y]\ [FORMAT=%{&ff}]\ [ENC=%{&enc}]\ [FENC=%{&fenc}]\ %-14.(%l,%c%V%)\ %P
 
 " highline current line & column
 " DOES NOT WORK with colorscheme solarized and blackboard
@@ -66,21 +66,24 @@ noremap <silent> <C-k> <esc><C-W><up>
 noremap <silent> <C-j> <esc><C-W><down>
 
 " Tab navigation
-"noremap <silent> tf :tabfirst<cr>
-"noremap <silent> tl :tablast<cr>
-"noremap <silent> tp :tabprevious<cr>
-"noremap <silent> tn :tabnext<cr>
-"noremap te :tabedit<space>
-"noremap tm :tabmove<space>
+noremap <silent> tf :tabfirst<cr>
+noremap <silent> tl :tablast<cr>
+noremap <silent> tp :tabprevious<cr>
+noremap <silent> tn :tabnext<cr>
+noremap te :tabedit<space>
+noremap tm :tabmove<space>
 
 
 " This means that you can have unwritten changes to a file and open a new file
 " using :e, without being forced to write or undo your changes first.
 set hidden
 
-" show command menu, work great with snipmate-snippets
-set wildmenu
+set wildmenu " show command menu, work great with snipmate-snippets
 set wildmode=list:longest,full  " command <Tab> completion, list matches, then longest common part, then all.
+
+set mouse=a " enable mouse
+
+"set grepprg='ack' " enable ack search
 
 if filereadable(expand("~/.vimrc.local"))
   source ~/.vimrc.local
@@ -94,7 +97,6 @@ Bundle 'tir_black'
 
 set t_Co=256
 color tir_black
-set grepprg='ack'
 
 " Thorfile, Rakefile and Gemfile and so on are Ruby
 au BufRead,BufNewFile {Gemfile,Rakefile,Thorfile,config.ru,Capfile,Guardfile,Vagrantfile} set ft=ruby

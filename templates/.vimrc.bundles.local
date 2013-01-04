@@ -10,7 +10,8 @@ Bundle 'EasyMotion'
 Bundle 'repeat.vim'
 
 
-"Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-fugitive'
+Bundle 'ack.vim'
 
 "------------------------------------------
 " Ruby
@@ -54,7 +55,6 @@ Bundle 'tpope/vim-rails'
 "NERDTree
 "------------------------------------------
 map <F5> :NERDTreeToggle<CR>:NERDTreeMirror<CR>
-set mouse=a
 let NERDTreeMouseMode=3
 let NERDTreeMinimalUI=1
 let NERDTreeQuitOnOpen=1
