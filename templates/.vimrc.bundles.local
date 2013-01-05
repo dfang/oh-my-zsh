@@ -1,5 +1,5 @@
-Bundle 'scrooloose/nerdtree'
-Bundle 'scrooloose/nerdcommenter'
+Bundle 'dfang/nerdtree'
+Bundle 'dfang/nerdcommenter'
 
 Bundle 'ervandew/supertab'
 
