@@ -1,5 +1,8 @@
 Bundle 'dfang/nerdtree'
 Bundle 'dfang/nerdcommenter'
+Bundle 'ack.vim'
+Bundle 'L9'
+Bundle 'FuzzyFinder'
 
 Bundle 'ervandew/supertab'
 
@@ -11,7 +14,6 @@ Bundle 'repeat.vim'
 
 
 Bundle 'tpope/vim-fugitive'
-Bundle 'ack.vim'
 
 "------------------------------------------
 " Ruby
@@ -44,8 +46,6 @@ Bundle 'garbas/vim-snipmate'
 Bundle 'zaiste/tmux.vim'
 Bundle 'vimux'
 
-Bundle 'L9'
-Bundle 'FuzzyFinder'
 
 Bundle 'tpope/vim-rails'
 "Bundle 'chilicuil/conque'
