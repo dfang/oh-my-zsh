@@ -1,1 +1,22 @@
-/Users/dfang/.irb-history
+app.url_for(:controller => 'foo', :action => 'bar')
+helper.link_to "this", "that"
+helper.class
+nil == false
+Time.now
+require 'ActionView::Helpers::UrlHelper
+Rails.application.class.parent_name
+Resque.workers
+Resque.workers.last
+Resque.workers.last.remove
+Resque.workers.last.prune_dead_workers
+Resque.workers.last.unregister_worker
+Thread.current
+Thread.current.user
+Thread.current.inspect
+app.class
+app.get '/'
+app.response.body
+app.session
+app.flash
+helper.method(:truncate)
+"".methods.grep(/case/).sort
