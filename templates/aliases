@@ -9,8 +9,10 @@ alias gds='git diff --stat'
 
 # list just files
 alias lf='ls *(.)'
-# list just directories *N*
+# list just directories *N* 
 alias ld='ls *(/)'
+# list only directories
+# ls -d */
 
 # To list only matching dot files , add -maxdepth 1 to not walk into path recursively
 # find . -type f -name ".*" -maxdepth 1
@@ -30,7 +32,7 @@ alias nginxtest='sudo /usr/local/sbin/nginx -t'
 alias apacheconf='sudo vi /etc/apache2/httpd.conf'
 alias zshrc='vi ~/.zshrc; source ~/.zshrc'
 alias ohmyzsh='vi ~/.oh-my-zsh'
-alias vimrc='vi ~/.vimrc; source ~/.vimrc' 
+alias vimrc='vi ~/.vimrc' 
 alias bashrc='vi ~/.bashrc; source ~/.bashrc'
 
 alias e='$EDITOR'
@@ -45,16 +47,24 @@ alias o='open'
 alias t='tail -f'
 alias v='vagrant'
 alias b='bundle'
-alias :q='exit' # vim style quit
+alias rdc='rake db:create'
+alias rdn='rake db:migrate'
+alias rdd='rake db:drop'
+alias rdr='rake db:rollback'
+
+alias :q='exit' # vim-style quit
 alias pid='ps aux | grep -v grep | grep $1'
 alias pidof='pidof | grep $1'
+alias ps?='ps ax | grep -v grep | grep $1'
+
 alias pyserver='python -m SimpleHTTPServer $1'
 alias header='curl -I $1'
 
 # http://osxdaily.com/2010/05/06/speed-up-a-slow-terminal-by-clearing-log-files
 alias speedup='sudo rm /private/var/log/asl/＊.asl'
-
+rtfm() { help $@ || man $@ || open "http://www.google.com/search?q=$@"; }
 alias myip='curl icanhazip.com'
+alias whatismyip='curl ifconfig.me'
 
 # zsh global alias
 alias -g L='| less' # Write L after a command to page through the output.

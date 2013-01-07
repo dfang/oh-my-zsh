@@ -10,3 +10,6 @@ http://www.refining-linux.org/archives/59/ZSH-Gem-24-ZSH-frameworks/
 http://marc-abramowitz.com/archives/2012/04/10/fix-for-oh-my-zsh-git-svn-prompt-slowness/
 # http://osxdaily.com/2010/05/06/speed-up-a-slow-terminal-by-clearing-log-files
 alias speedup='sudo rm /private/var/log/asl/＊.asl'
+
+
+http://ss64.com/bash/
