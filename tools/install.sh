@@ -32,6 +32,10 @@ echo 'please config your git username and email, like '
 echo "$ git config --global user.name 'John Doe'"
 echo "git config --global user.email johndoe@example.com"
 
+ln -sf ~/.vimrc templates/vimrc
+ln -sf ~/.vimrc.bundles.local templates/vimrc.bundles.local 
+
+
 echo "\033[0;34mCopying your current PATH and adding it to the end of ~/.zshrc for you.\033[0m"
 echo " "
 echo "export PATH=$PATH" >> ~/.zshrc

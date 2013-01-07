@@ -1,5 +1,1 @@
-:sources: 
-- http://ruby.taobao.org
-- https://rubygems.org
-gem: --no-rdoc --no-ri
-:ssl_verify_mode: 0
+/Users/dfang/.gemrc

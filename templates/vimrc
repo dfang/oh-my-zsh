@@ -32,15 +32,17 @@ set autoindent
 set number " show line numbers
 set showmatch
 set nowrap
-set ruler " show the cursor position all the time
 set tabstop=2 softtabstop=2 shiftwidth=2 expandtab
 
 " set increment search and hightlight search and ignorecase search
 set incsearch hlsearch ignorecase 
 
+set ruler " show the cursor position all the time
+set rulerformat=%55(%{strftime('%a\ %b\ %e\ %I:%M\ %p')}\ %5l,%-6(%c%V%)\ %P%)
+
 " status line setting
-" set laststatus=2
-" set statusline=%<%f\ %h%m%r%=[TYPE=%Y]\ [FORMAT=%{&ff}]\ [ENC=%{&enc}]\ [FENC=%{&fenc}]\ %-14.(%l,%c%V%)\ %P
+set laststatus=2 " alwasy show status line 
+set statusline=%<%f\ %h%m%r%=[TYPE=%Y]\ [FORMAT=%{&ff}]\ [ENC=%{&enc}]\ [FENC=%{&fenc}]\ %-14.(%l,%c%V%)\ %P
 
 " highline current line & column
 " DOES NOT WORK with colorscheme solarized and blackboard
@@ -50,16 +52,16 @@ set cursorcolumn
 highlight cursorline term=underline cterm=NONE ctermbg=0 gui=NONE guibg=Grey40
 
 " Fast reloading of the .vimrc
-nmap <silent> <leader>ss :source ~/.vimrc<cr>
+nmap <silent> <leader>sv :source ~/.vimrc<cr>
 
 " Fast editing of .vimrc
-nmap <silent> <leader>ee :tabedit ~/.vimrc<cr>
+nmap <silent> <leader>ev :tabedit ~/.vimrc<cr>
 
 " When .vimrc is edited, reload it
 autocmd! bufwritepost .vimrc source ~/.vimrc
 
 
-" Windows switch with Ctrl+↑↓←→
+" Windows switch with Ctrl+h, etc
 noremap <silent> <C-h> <esc><C-W><left>
 noremap <silent> <C-l> <esc><C-W><right>
 noremap <silent> <C-k> <esc><C-W><up>
