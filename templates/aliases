@@ -51,11 +51,11 @@ alias rdc='rake db:create'
 alias rdn='rake db:migrate'
 alias rdd='rake db:drop'
 alias rdr='rake db:rollback'
-
+alias rdtp='rake db:test:prepare'
 alias :q='exit' # vim-style quit
 alias pid='ps aux | grep -v grep | grep $1'
 alias pidof='pidof | grep $1'
-alias ps?='ps ax | grep -v grep | grep $1'
+alias 'ps?'='ps ax | grep -v grep | grep $1'
 
 alias pyserver='python -m SimpleHTTPServer $1'
 alias header='curl -I $1'
@@ -65,6 +65,11 @@ alias speedup='sudo rm /private/var/log/asl/＊.asl'
 rtfm() { help $@ || man $@ || open "http://www.google.com/search?q=$@"; }
 alias myip='curl icanhazip.com'
 alias whatismyip='curl ifconfig.me'
+google() { open "http://www.google.com.hk/search?q=$@" }
+rubygems() { open "http://rubygems.org/gems/$@" }
+rubygems_search() { open "http://rubygems.org/search?q=$@" }
+github() { open "http://github.com/$@" }
+github_search() { open "http://github.com/search?q=$@" }
 
 # zsh global alias
 alias -g L='| less' # Write L after a command to page through the output.
