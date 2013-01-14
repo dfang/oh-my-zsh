@@ -2,7 +2,7 @@
 if [[ $('uname') == 'Linux' ]]; then
   runst() { nohup /usr/bin/sublime-text-2 $@ > /dev/null & }
   alias subl=runst
-
+  alias sb=runst
   # Manage packages
   alias agi='sudo apt-get install'
   alias agr='sudo apt-get remove'
@@ -34,5 +34,6 @@ if [[ $('uname') == 'Linux' ]]; then
 
 elif  [[ $('uname') == 'Darwin' ]]; then
   alias subl='open -a /Applications/Sublime\ Text\ 2.app'
+  alias sb=subl
   export PLATFORM='MAC'
 fi
