@@ -20,3 +20,31 @@ app.session
 app.flash
 helper.method(:truncate)
 "".methods.grep(/case/).sort
+require 'pry-nav'
+next
+exit
+!!
+!!!
+qit
+Dir.glob("*.mp4")
+cd raise
+Dir.chdir("railscasts pro")
+Dir.pwd
+Dir.glob("**/*.mp4"/b)
+Dir.glob("**/*.mp4/b")
+Dir.glob("**/*/b")
+Dir.glob("**/*.mp4")
+Dir.glob("**/*.mp4, Railscasts/*.mp4")
+Dir.glob("**/*.mp4, railscasts/*.mp4")
+Dir.glob("**/*.mp4, railscasts/*.mp4/b")
+Dir.glob("**/*.mp4, Railscasts/*.mp4/b")
+Dir.glob("Railscasts/*.mp4")
+Dir.glob("Railscasts/*.mp4","Railscasts\ Pro/*.mp4")
+Dir.glob("Railscasts/*.mp4","Railscast Pro/*.mp4")
+Dir.glob("Railscasts/*.mp4", "Railscast Pro/*.mp4")
+   Dir.glob("**{,/*/**}/*.rb")
+   Dir.glob("**{,/*/**}/*.mp4")
+Dir.glob("**{,/*/**}/*.mp4")Dir.glob("**/*/**/b")
+Dir.glob("**{,/*/**}/*.mp4")
+videos_urls
+quit
