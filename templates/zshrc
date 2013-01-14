@@ -16,15 +16,15 @@ COMPLETION_WAITING_DOTS="true"
 # Completion
 fpath=(/usr/local/share/zsh-completions $fpath)
 
-# plugins
+# Plugins
 plugins=(git rvm brew bundle rails3 ruby vagrant autojump)
 
 source $ZSH/oh-my-zsh.sh
 
-# disable auto-correct
+# Disable auto-correct
 unsetopt correct_all
 
-# check if a command is available
+# Check if a command is available
 function command_exists() { which "$1" >/dev/null 2>/dev/null }
 
 if command_exists vim; then
@@ -40,9 +40,8 @@ export BUNDLER_EDITOR=subl
 source ~/.aliases
 
 # Customize to your needs...
-export PATH=$HOME/bin:$PATH:/usr/local/sbin:$HOME/.rvm/bin # Add RVM to PATH for scripting
 export PATH=$PATH:/usr/local/sbin:/usr/sbin:/sbin
-# export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/dfang/.rvm/gems/ruby-1.9.3-p286/bin:/Users/dfang/.rvm/rubies/ruby-1.9.3-p286/bin:/Users/dfang/.rvm/bin:/Users/dfang/bin:/usr/local/sbin
+export PATH=$HOME/bin:$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM
 
 #bindkey -v

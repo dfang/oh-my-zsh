@@ -14,5 +14,5 @@
   ci = commit
   st = status
   df = diff
-  unstage = reset HARD --
+  unstage = reset HEAD --
   last = log -1 HEAD
