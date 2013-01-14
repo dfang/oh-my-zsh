@@ -1,18 +1,21 @@
 [user]
-  name = 
-  email = 
+	name = 
+	email = 
 [mergetool]
-  keepBackup = true
+	keepBackup = true
 [color]
-  diff = auto
-  status = auto
-  branch = auto
-  interactive = auto
+	diff = auto
+	status = auto
+	branch = auto
+	interactive = auto
 [alias]
-  co = checkout
-  br = branch
-  ci = commit
-  st = status
-  df = diff
-  unstage = reset HEAD --
-  last = log -1 HEAD
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
+	df = diff
+	unadd = reset HEAD --
+	unstage = reset HEAD --
+	last = log -1 HEAD
+	u = reset HEAD --
+	a = add
