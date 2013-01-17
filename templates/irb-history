@@ -48,3 +48,6 @@ Dir.glob("**{,/*/**}/*.mp4")Dir.glob("**/*/**/b")
 Dir.glob("**{,/*/**}/*.mp4")
 videos_urls
 quit
+ls
+pry
+bson

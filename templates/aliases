@@ -86,3 +86,4 @@ alias -g C='| wc -l' # eg. grep -r alias ~/.oh-my-zsh C
 alias 'dev'='cd ~/Development'
 alias 'capalyze'="cd ~/Development/capalyze"
 alias 'r8'="cd ~/Development/r8"
+alias 'hive'='cd ~/Development/hivenation.web'
