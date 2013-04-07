@@ -1,6 +1,7 @@
+alias gst='git status'
+alias gs='git status'
 alias cls='clear'
 alias gitx='open -a GitX .'
-alias gs='gst'
 alias glog='git log -n 5'
 alias glast='git log -n 1'
 alias gd='git diff'
@@ -57,6 +58,13 @@ alias rap='rake assets:compile'
 alias rdms='rake db:migrate:status'
 alias rrt='rake rails:template'
 alias rru='rake rails:update'
+alias rg='rails generate'
+alias rd='rails destroy'
+alias rc='rails console'
+alias rs='rails server'
+alias rdb='rails dbconsole'
+alias devlog='tail -f log/development.log'
+
 
 alias :q='exit' # vim-style quit
 alias pid='ps aux | grep -v grep | grep $1'

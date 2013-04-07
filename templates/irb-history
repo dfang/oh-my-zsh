@@ -1,11 +1,3 @@
-app.url_for(:controller => 'foo', :action => 'bar')
-helper.link_to "this", "that"
-helper.class
-nil == false
-Time.now
-require 'ActionView::Helpers::UrlHelper
-Rails.application.class.parent_name
-Resque.workers
 Resque.workers.last
 Resque.workers.last.remove
 Resque.workers.last.prune_dead_workers
@@ -51,3 +43,58 @@ quit
 ls
 pry
 bson
+(1..100000).inject(0) {|x,y| x+y }  
+(1..1000000).inject(0) {|x,y| x+y } 
+(1..10000000000).inject(0) {|x,y| x+y }
+(1..10000000000).reduce {|x,y| x+y }
+(1..1000000000).reduce {|x,y| x+y }
+(1..100000).reduce {|x,y| x+y }
+(1..1000000).reduce {|x,y| x+y }
+(1..10000000).reduce {|x,y| x+y }
+(1..100000000).reduce {|x,y| x+y }
+((1+500000000000)*500000000000)/2
+((1+50000000000000000000000)*500000000000000000000000000000000000000000)/2
+locales = [:en, :de, :fr]
+local
+locales
+locales.inject({}) {|hsh, sym| hsh[sym] = sym.to_s.upcase; hsh}
+Hash[locales.map{|sym| [sym, sym.to_s.upcase]}]
+Hash[:a,:b]
+Hash[:a,:b,:c,:d]
+Hash[locales.map{|sym| [sym.to_s.upcase]}
+Hash[locales.map{|sym| [sym.to_s.upcase]}]
+locales.map {|s| s, s.to_s.upcase}
+locales.map {|s| [s, s.to_s.upcase] }
+a = [1, 2, 3]
+b = [4, 5, 6]
+c = [7, 8, 9]
+[a,b,c]
+[a,b,c].transpose
+[a,b,c].transpose.map {|x| x.reduce :+}
+a = [ [1, 2], [3, 4] ]
+b = [ [5, 6], [7, 8] ]
+c = [ [9, 10], [11, 12] ]
+a.transpose
+a = [ [1], [2, 3] ]
+b = [ [4, 5], [] ]
+[a,b].transpose
+  list = []
+  l = Array.new(array)
+  list << (l.pop Random.rand(1..max_element) )  while l.count > 0 
+rand_split (1..10).to_a, 3
+rand_split (1..10).to_a, 2
+rand_split (1..10).to_a, 5
+  list
+def rand_split(array, max_element)
+  copy = array.shuffle
+  result = []
+  until copy.empty?
+    random_element = rand(max_element+1)
+    result << copy.pop(random_element)
+  end
+  result
+end
+rand_split (1..10).to_a, 7
+rand_split (1..10).to_a, 7arr = ["one","two",3,4,"five",6,"seven"]
+arr = ["one","two",3,4,"five",6,"seven"]
+x = arr.map { |item| item.to_s + "*" } # MAP
