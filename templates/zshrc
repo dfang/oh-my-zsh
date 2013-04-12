@@ -17,7 +17,7 @@ COMPLETION_WAITING_DOTS="true"
 fpath=(/usr/local/share/zsh-completions $fpath)
 
 # Plugins
-plugins=(bundler autojump cp extract history history-substring-search per-directory-history theme vagrant rsync git gitfast)
+plugins=(bundler autojump cp extract history history-substring-search per-directory-history theme vagrant rsync git gitfast node npm)
 
 source $ZSH/oh-my-zsh.sh
 

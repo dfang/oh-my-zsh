@@ -35,6 +35,6 @@ if [[ $('uname') == 'Linux' ]]; then
 elif  [[ $('uname') == 'Darwin' ]]; then
   alias subl='open -a /Applications/Sublime\ Text\ 2.app'
   alias sb3='open -a /Applications/Sublime\ Text.app'
-  alias sb=subl
+  alias sb=sb3
   export PLATFORM='MAC'
 fi
