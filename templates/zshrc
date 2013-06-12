@@ -27,9 +27,10 @@ fi
 export EDITOR='vi'
 export VISUAL='vi'
 export PAGER='less'
-export BUNDLER_EDITOR=subl
+export BUNDLER_EDITOR='sb'
 #export LC_ALL=en_US.utf-8 
 #export LANG="$LC_ALL" #set encoding for vim nerdtree
+
 source ~/.aliases
 
 # Customize to your needs...
@@ -40,4 +41,4 @@ export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/dfang/.rvm/gems/
 #bindkey -v
 #bindkey ‘^R’ history-incremental-search-backward
 
-
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi

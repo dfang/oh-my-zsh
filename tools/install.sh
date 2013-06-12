@@ -10,31 +10,27 @@ hash git >/dev/null && /usr/bin/env git clone https://github.com/dfang/oh-my-zsh
   exit
 }
 
-echo "\033[0;34mLooking for an existing zsh config...\033[0m"
-if [ -f ~/.zshrc ] || [ -h ~/.zshrc ]
-then
-  echo "\033[0;33mFound ~/.zshrc.\033[0m \033[0;32mBacking up to ~/.zshrc.pre-oh-my-zsh\033[0m";
-  mv ~/.zshrc ~/.zshrc.pre-oh-my-zsh;
-fi
+echo "\033[0;34mBacking up old shit dot files\033[0m"
+mkdir ~/.old_shit
+cp ~/.zshrc ~/.old_shit/
+cp ~/.aliases ~/.old_shit/
+cp ~/.railsrc ~/.old_shit/
+cp ~/.gemrc ~/.old_shit/
+cp ~/.gitconfig ~/.old_shit/
+cp ~/.vimrc ~/.old_shit
+cp ~/.vimrc.bundles.local ~/.old_shit
 
-echo "\033[0;34mUsing the Oh My Zsh custom dot files\033[0m"
-cp ~/.oh-my-zsh/templates/zshrc  ~/.zshrc
-echo '.zshrc copied'
-ln -s ~/.oh-my-zsh/templates/aliases  ~/.aliases
-echo '.aliases copied'
-ln -s ~/.oh-my-zsh/templates/gemrc  ~/.gemrc
-echo '.gemrc copied'
-ln -s ~/.oh-my-zsh/templates/railsrc  ~/.railsrc
-echo '.railsrc copied'
-ln -s ~/.oh-my-zsh/templates/gitconfig  ~/.gitconfig
-echo '.gitconfig copied'
-echo 'please config your git username and email, like '
+echo "\033[0;34mCopying custom dot files\033[0m"
+ln -sf ~/.oh-my-zsh/templates/zshrc  ~/.zshrc
+ln -sf ~/.oh-my-zsh/templates/aliases  ~/.aliases
+ln -sf ~/.oh-my-zsh/templates/gemrc  ~/.gemrc
+ln -sf ~/.oh-my-zsh/templates/railsrc  ~/.railsrc
+ln -sf ~/.oh-my-zsh/templates/gitconfig  ~/.gitconfig
+ln -sf templates/vimrc  ~/.vimrc
+ln -sf templates/vimrc.bundles.local ~/.vimrc.bundles.local
+
 echo "$ git config --global user.name 'John Doe'"
 echo "git config --global user.email johndoe@example.com"
-
-ln -sf ~/.vimrc templates/vimrc
-ln -sf ~/.vimrc.bundles.local templates/vimrc.bundles.local 
-
 
 echo "\033[0;34mCopying your current PATH and adding it to the end of ~/.zshrc for you.\033[0m"
 echo " "
@@ -53,5 +49,4 @@ echo "\033[0;32m"'                        /____/                       '"\033[0m
 echo "\n\n \033[0;32m....is now installed.\033[0m"
 /usr/bin/env zsh
 source ~/.zshrc
-
 
