@@ -18,15 +18,15 @@ then
 fi
 
 echo "\033[0;34mUsing the Oh My Zsh custom dot files\033[0m"
-cp ~/.oh-my-zsh/templates/.zshrc  ~/.zshrc
+cp ~/.oh-my-zsh/templates/zshrc  ~/.zshrc
 echo '.zshrc copied'
-ln -s ~/.oh-my-zsh/templates/.aliases  ~/.aliases
+ln -s ~/.oh-my-zsh/templates/aliases  ~/.aliases
 echo '.aliases copied'
-ln -s ~/.oh-my-zsh/templates/.gemrc  ~/.gemrc
+ln -s ~/.oh-my-zsh/templates/gemrc  ~/.gemrc
 echo '.gemrc copied'
-ln -s ~/.oh-my-zsh/templates/.railsrc  ~/.railsrc
+ln -s ~/.oh-my-zsh/templates/railsrc  ~/.railsrc
 echo '.railsrc copied'
-ln -s ~/.oh-my-zsh/templates/.gitconfig  ~/.gitconfig
+ln -s ~/.oh-my-zsh/templates/gitconfig  ~/.gitconfig
 echo '.gitconfig copied'
 echo 'please config your git username and email, like '
 echo "$ git config --global user.name 'John Doe'"
