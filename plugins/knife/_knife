@@ -23,10 +23,10 @@ _knife() {
     '4: :->knifesubcmd3' \
     '5: :->knifesubcmd4' \
     '6: :->knifesubcmd5'
-  
+
   case $state in
   knifecmd)
-    compadd -Q "$@" bootstrap client configure cookbook "cookbook site" "data bag" exec environment index node recipe role search ssh status windows $cloudproviders
+    compadd -Q "$@" bootstrap client configure cookbook "cookbook site" "data bag" exec environment index node recipe role search solo ssh status windows $cloudproviders
   ;;
   knifesubcmd)
     case $words[2] in
@@ -48,12 +48,15 @@ _knife() {
     node)
      compadd -Q "$@" "from file" create show edit delete list run_list "bulk delete"
     ;;
+    solo)
+     compadd -Q "$@" init prepare cook bootstrap clean
+    ;;
     recipe)
      compadd "$@" list
     ;;
     role)
       compadd -Q "$@" "bulk delete" create delete edit "from file" list show
-    ;; 
+    ;;
     windows)
       compadd "$@" bootstrap
     ;;
@@ -120,8 +123,8 @@ _knife() {
       else
        _arguments '*:Subsubcommands:($(_knife_options2))'
       fi
-    ;; 
-    knifesubcmd5) 
+    ;;
+    knifesubcmd5)
       _arguments '*:Subsubcommands:($(_knife_options3))'
    esac
 }
