@@ -1,44 +1,56 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
-# ZSH_THEME="gozilla"
-# ZSH_THEME="robbyrussell"
-# ZSH_THEME="kolo"
-ZSH_THEME='frisk' # a theme works in ubuntu
+# Set name of the theme to load.
+# Look in ~/.oh-my-zsh/themes/
+# Optionally, if you set this to "random", it'll load a random theme each time that oh-my-zsh is loaded.
+# gozilla
+# af-magic
+# kolo
+# bira
+# wedisagree
+# mgutz
+# kennethreitz
+# lambda
+# imajes
+# crcandy
+# frisk, works in ubuntu
+# dstufft
 
+ZSH_THEME="theunraveler"
+
+# Set to this to use case-sensitive completion
+# CASE_SENSITIVE="true"
 DISABLE_AUTO_UPDATE="true"
+DISABLE_CORRECTION="true"
 COMPLETION_WAITING_DOTS="true"
+DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-# plugins
-plugins=(git rvm brew bundler cap gem rails3 ruby vagrant autojump)
+# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+plugins=(git bundler brew gem knife history history-substring-search node npm bower vagrant berks)
+
+# amend the path, for more http://daniel.hepper.net/blog/2011/02/change-order-of-path-entries-on-mac-os-x/
+export PATH="/usr/local/bin:$PATH"
+
+export EDITOR='sb -w'
 
 source $ZSH/oh-my-zsh.sh
+source $HOME/.zsh_aliases
 
-# disable auto-correct
-unsetopt correct_all
-
-# check if a command is available
-function command_exists() { which "$1" >/dev/null 2>/dev/null }
-
-if command_exists vim; then
-  alias vi='vim'
-fi
-
-export EDITOR='vi'
-export VISUAL='vi'
-export PAGER='less'
-export BUNDLER_EDITOR='sb'
-#export LC_ALL=en_US.utf-8 
-#export LANG="$LC_ALL" #set encoding for vim nerdtree
-
-source ~/.aliases
-
-# Customize to your needs...
-export PATH=$HOME/bin:$PATH:/usr/local/sbin:$HOME/.rvm/bin # Add RVM to PATH for scripting
-export PATH=$PATH:/usr/local/sbin:/usr/sbin:/sbin
-export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/dfang/.rvm/gems/ruby-1.9.3-p286/bin:/Users/dfang/.rvm/rubies/ruby-1.9.3-p286/bin:/Users/dfang/.rvm/bin:/Users/dfang/bin:/usr/local/sbin
-
-#bindkey -v
-#bindkey ‘^R’ history-incremental-search-backward
-
+# add support for Homebrew installed rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
+# add npm support
+export PATH="/usr/local/share/npm/bin:$PATH"
+
+# add completion for aws cli
+source /usr/local/bin/aws_zsh_completer.sh
+export AWS_CONFIG_FILE="~/.AWS_Config"
+
+
+# add support for homebrew installed autojump
+[[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
+
+[[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator

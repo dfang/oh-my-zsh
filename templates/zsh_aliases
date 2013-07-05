@@ -1,0 +1,111 @@
+# Example aliases
+alias zshconfig="sb ~/.zshrc"
+alias ohmyzsh="mate ~/.oh-my-zsh"
+
+alias l="ls -alh"
+alias be='bundle exec'
+alias g="git"
+alias r="rails"
+alias rs="rails s"
+alias rc="rails c"
+alias rdb="rails db"
+alias rr="rake routes"
+alias rg='_rails_command generate'
+alias rgm='_rails_command generate migration'
+alias rdd="rake db:drop"
+alias rdc="rake db:create"
+alias rdm="rake db:migrate"
+alias rdms="rake db:migrate:status"
+alias rdr="rake db:rollback"
+alias rds="rake db:seed"
+alias o="open"
+alias cstart="consular start"
+alias cedit="consular edit"
+
+alias gs="git status"
+alias v="vagrant"
+alias pid="ps aux | grep $1"
+alias -g rep="RAILS_ENV=production"
+alias -g ret='RAILS_ENV=test'
+
+alias rap="rake assets:precompile"
+alias capd="cap deploy"
+alias cappd="cap production deploy"
+
+alias reload="source ~/.zshrc"
+alias reload!="source ~/.zshrc"
+alias :q='exit' # vim style quit
+alias cls='clear'
+
+alias ssh-copy-id="ssh-copy-id -i ~/.ssh/id_rsa.pub $1"
+
+alias gitx='open -a GitX .'
+alias gs='gst'
+alias glog='git log -n 5'
+alias glast='git log -n 1'
+alias gd='git diff'
+alias gdc='git diff --cached'
+alias gds='git diff --stat'
+
+alias lf='ls *(.)' # list just files
+alias ld='ls *(/)' # list just directories *N*
+
+# To list only matching dot files , add -maxdepth 1 to not walk into path recursively
+# find . -type f -name ".*" -maxdepth 1
+
+# To list only matching dot directories
+# find . -type d -name ".*" -maxdepth 1
+
+alias tlog='tail -f log/development.log'
+alias ctlog='cp /dev/null log/development.log && tail -f log/development.log' # clear and tail log
+alias devlog='tail -f log/development.log'
+alias testlog='tail -f log/test.log'
+alias prodlog='tail -f log/production.log'
+
+# check if a command is available
+function command_exists() { which "$1" >/dev/null 2>/dev/null }
+
+if command_exists vim; then
+  alias vi='vim'
+fi
+
+alias etc='cd /etc'
+alias nginxconf='sudo vi /usr/local/etc/nginx/nginx.conf'
+alias nr='sudo /usr/local/sbin/nginx -s reload'
+alias nt='sudo /usr/local/sbin/nginx -t'
+alias apacheconf='sudo vi /etc/apache2/httpd.conf'
+alias zshrc='vi ~/.zshrc; source ~/.zshrc'
+alias ohmyzsh='vi ~/.oh-my-zsh'
+alias vimrc='vi ~/.vimrc; source ~/.vimrc'
+alias bashrc='vi ~/.bashrc; source ~/.bashrc'
+
+alias pid='ps aux | grep -v grep | grep $1'
+alias pidof='pidof | grep $1'
+alias pyserver='python -m SimpleHTTPServer $1'
+alias header='curl -I $1'
+alias myip='curl icanhazip.com'
+
+# flush dns in mountain lion
+alias flush_dns="sudo killall -HUP mDNSResponder"
+# show hidden files in finder
+alias show_hidden_files="defaults write com.apple.finder AppleShowAllFiles TRUE"
+# restart dock
+alias restart_dock="killall Dock"
+# http://osxdaily.com/2010/05/06/speed-up-a-slow-terminal-by-clearing-log-files
+alias speedup='sudo rm /private/var/log/asl/＊.asl'
+
+# project alias, use autojump instead
+alias 'dev'='cd ~/Development'
+
+# ssh server alias
+alias ssh-staging='ssh ubuntu@ec2-54-215-124-223.us-west-1.compute.amazonaws.com -i ~/.ssh/vfoliokey.pem'
+alias ssh-wowza='ssh ec2-user@ec2-50-18-240-4.us-west-1.compute.amazonaws.com -i ~/.ssh/vfoliokey.pem'
+alias ssh-production='ssh ec2-user@ec2-54-215-100-21.us-west-1.compute.amazonaws.com -i ~/.ssh/vfoliokey.pem'
+alias ssh-large='ssh ec2-user@ec2-54-241-58-100.us-west-1.compute.amazonaws.com -i ~/.ssh/vfolio-media-server-large.pem'
+alias ssh-v='ssh ec2-user@ec2-50-18-73-160.us-west-1.compute.amazonaws.com -i ~/.ssh/vfolio-media-server-large.pem'
+alias ssh-hk='ssh dfang@hk.ekohe.com'
+
+# snippets
+# cmap w!! %!sudo tee > /dev/null %
+# sudo chown -R `whoami` /usr/local
+# rsync -av

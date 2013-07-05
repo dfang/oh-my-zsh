@@ -22,7 +22,6 @@ GIT_VERSION="$(git --version | head -n1 | grep -oE '[0-9]+\.[0-9]+\.[0-9]+')"
   fi
 
 
-
 function e() {
     $EDITOR "$@" >/dev/null
 }
@@ -34,3 +33,9 @@ else
     export EDITOR="vi"
     export VISUAL="vi"
 fi
+
+
+# snippets
+# cmap w!! %!sudo tee > /dev/null %
+# sudo chown -R `whoami` /usr/local
+# rsync -av local remote
