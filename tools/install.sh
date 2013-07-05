@@ -34,7 +34,8 @@ echo "git config --global user.email johndoe@example.com"
 
 echo "\033[0;34mCopying your current PATH and adding it to the end of ~/.zshrc for you.\033[0m"
 echo " "
-echo "export PATH=$PATH" >> ~/.zshrc
+echo "export PATH=\$PATH:$PATH" >> ~/.zshrc
+
 
 echo "\033[0;34mTime to change your default shell to zsh!\033[0m"
 chsh -s `which zsh`
