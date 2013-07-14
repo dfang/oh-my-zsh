@@ -29,7 +29,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git bundler brew gem knife history history-substring-search node npm bower vagrant berks)
+plugins=(git bundler brew gem knife history history-substring-search node npm bower vagrant themes berks)
 
 # amend the path, for more http://daniel.hepper.net/blog/2011/02/change-order-of-path-entries-on-mac-os-x/
 export PATH="/usr/local/bin:$PATH"
