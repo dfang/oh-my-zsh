@@ -41,6 +41,8 @@ source $HOME/.zsh_aliases
 
 # add support for Homebrew installed rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+#PATH for rbenv
+export PATH="$HOME/.rbenv/shims:$PATH"
 
 # add npm support
 export PATH="/usr/local/share/npm/bin:$PATH"

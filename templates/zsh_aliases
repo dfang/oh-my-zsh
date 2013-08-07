@@ -1,7 +1,7 @@
 # Example aliases
 alias zshconfig="sb ~/.zshrc"
 alias ohmyzsh="mate ~/.oh-my-zsh"
-
+alias b='bundle'
 alias l="ls -alh"
 alias be='bundle exec'
 alias g="git"
