@@ -1,12 +1,14 @@
 # Example aliases
 alias zshconfig="sb ~/.zshrc"
-alias ohmyzsh="mate ~/.oh-my-zsh"
+alias ohmyzsh="sb ~/.oh-my-zsh"
 alias b='bundle'
 alias l="ls -alh"
 alias be='bundle exec'
 alias g="git"
 alias r="rails"
+alias rk="rake"
 alias rs="rails s"
+alias ts='thin start'
 alias rc="rails c"
 alias rdb="rails db"
 alias rr="rake routes"
@@ -18,6 +20,7 @@ alias rdm="rake db:migrate"
 alias rdms="rake db:migrate:status"
 alias rdr="rake db:rollback"
 alias rds="rake db:seed"
+alias rdst='rake db:setup'
 alias o="open"
 alias cstart="consular start"
 alias cedit="consular edit"
@@ -31,12 +34,14 @@ alias -g ret='RAILS_ENV=test'
 alias rap="rake assets:precompile"
 alias capd="cap deploy"
 alias cappd="cap production deploy"
+alias capsd="cap staging deploy"
 
 alias reload="source ~/.zshrc"
 alias reload!="source ~/.zshrc"
 alias :q='exit' # vim style quit
 alias cls='clear'
 
+# if not passing arguments , just ssh-copy-id default public key
 alias ssh-copy-id="ssh-copy-id -i ~/.ssh/id_rsa.pub $1"
 
 alias gitx='open -a GitX .'
