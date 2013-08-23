@@ -56,3 +56,8 @@ export AWS_CONFIG_FILE="~/.AWS_Config"
 [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
 
 [[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
+
+# set PS1 in macvim, http://stackoverflow.com/questions/12942781/zsh-correct-shell-input-output-inside-vim-macvim
+if [[ $TERM == 'dumb' ]]; then
+  export RPS1="\n\w\n\u $ "
+fi
