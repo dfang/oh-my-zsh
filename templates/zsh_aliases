@@ -22,6 +22,9 @@ alias rdr="rake db:rollback"
 alias rds="rake db:seed"
 alias rdst='rake db:setup'
 alias rdrst='rake db:reset'
+
+alias migrate='rake db:migrate; rake db:migrate RAILS_ENV=test'
+
 alias o="open"
 alias cstart="consular start"
 alias cedit="consular edit"
