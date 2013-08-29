@@ -37,7 +37,10 @@ export PATH="/usr/local/bin:$PATH"
 export EDITOR='sb -w'
 
 source $ZSH/oh-my-zsh.sh
-source $HOME/.zsh_aliases
+
+[[ -f $HOME/.zsh_aliases ]] && source $HOME/.zsh_aliases
+
+[[ -f $HOME/.ssh_aliases ]] && source $HOME/.ssh_aliases
 
 # add support for Homebrew installed rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi

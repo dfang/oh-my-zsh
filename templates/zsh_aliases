@@ -1,10 +1,11 @@
-# Example aliases
 alias zshconfig="sb ~/.zshrc"
 alias ohmyzsh="sb ~/.oh-my-zsh"
+
 alias b='bundle'
 alias l="ls -alh"
 alias be='bundle exec'
-alias g="git"
+alias bi='bundle install'
+alias bu='bundle update'
 alias r="rails"
 alias rk="rake"
 alias rs="rails s"
@@ -12,8 +13,8 @@ alias ts='thin start'
 alias rc="rails c"
 alias rdb="rails db"
 alias rr="rake routes"
-alias rg='_rails_command generate'
-alias rgm='_rails_command generate migration'
+alias rg='rails generate'
+alias rgm='rails generate migration'
 alias rdd="rake db:drop"
 alias rdc="rake db:create"
 alias rdm="rake db:migrate"
@@ -29,7 +30,36 @@ alias o="open"
 alias cstart="consular start"
 alias cedit="consular edit"
 
-alias gs="git status"
+# -------------------------------------------------------------------
+# Git aliases
+# -------------------------------------------------------------------
+alias g="git"
+alias gcl='git clone'
+alias ga='git add'
+alias gl='git log'
+alias gs='git show'
+alias gst='git status'
+alias gd='git diff'
+alias gdw='git diff --word-diff'
+alias gdc='git diff --cached'
+alias gds='git diff --stat'
+alias gb='git branch'
+alias gba='git branch -a'
+alias gco='git checkout'
+alias gci='git commit'
+alias gm='git commit -m'
+alias gma='git commit -am'
+alias gr='git remote'
+alias grv='git remote -v'
+alias gpl='git pull'
+alias gps='git push'
+alias gsl='git stash list'
+alias gss='git stash save'
+alias gsp='git stash pop'
+
+alias gitx='open -a GitX .'
+alias glast='git log -n 1'
+
 alias v="vagrant"
 alias pid="ps aux | grep $1"
 alias -g rep="RAILS_ENV=production"
@@ -48,13 +78,6 @@ alias cls='clear'
 # if not passing arguments , just ssh-copy-id default public key
 alias ssh-copy-id="ssh-copy-id -i ~/.ssh/id_rsa.pub $1"
 
-alias gitx='open -a GitX .'
-alias gs='gst'
-alias glog='git log -n 5'
-alias glast='git log -n 1'
-alias gd='git diff'
-alias gdc='git diff --cached'
-alias gds='git diff --stat'
 
 alias lf='ls *(.)' # list just files
 alias ld='ls *(/)' # list just directories *N*
@@ -79,9 +102,9 @@ if command_exists vim; then
 fi
 
 alias etc='cd /etc'
-alias nginxconf='sudo vi /usr/local/etc/nginx/nginx.conf'
 alias nr='sudo /usr/local/sbin/nginx -s reload'
 alias nt='sudo /usr/local/sbin/nginx -t'
+alias nginxconf='sudo vi /usr/local/etc/nginx/nginx.conf'
 alias apacheconf='sudo vi /etc/apache2/httpd.conf'
 alias zshrc='vi ~/.zshrc; source ~/.zshrc'
 alias ohmyzsh='vi ~/.oh-my-zsh'
@@ -89,10 +112,17 @@ alias vimrc='vi ~/.vimrc; source ~/.vimrc'
 alias bashrc='vi ~/.bashrc; source ~/.bashrc'
 
 alias pid='ps aux | grep -v grep | grep $1'
-alias pidof='pidof | grep $1'
 alias pyserver='python -m SimpleHTTPServer $1'
 alias header='curl -I $1'
-alias myip='curl icanhazip.com'
+function myip(){
+  echo ''
+  echo 'local ip is :'
+  ifconfig | grep 'inet ' | grep -v 127.0.0.1 | cut -d\  -f2
+  echo 'external ip is :'
+  curl icanhazip.com
+  echo ''
+}
+alias ip=myip
 
 # flush dns in mountain lion
 alias flush_dns="sudo killall -HUP mDNSResponder"
@@ -105,14 +135,6 @@ alias speedup='sudo rm /private/var/log/asl/＊.asl'
 
 # project alias, use autojump instead
 alias 'dev'='cd ~/Development'
-
-# ssh server alias
-alias ssh-staging='ssh ubuntu@ec2-54-215-124-223.us-west-1.compute.amazonaws.com -i ~/.ssh/vfoliokey.pem'
-alias ssh-wowza='ssh ec2-user@ec2-50-18-240-4.us-west-1.compute.amazonaws.com -i ~/.ssh/vfoliokey.pem'
-alias ssh-production='ssh ec2-user@ec2-54-215-100-21.us-west-1.compute.amazonaws.com -i ~/.ssh/vfoliokey.pem'
-alias ssh-large='ssh ec2-user@ec2-54-241-58-100.us-west-1.compute.amazonaws.com -i ~/.ssh/vfolio-media-server-large.pem'
-alias ssh-v='ssh ec2-user@ec2-50-18-73-160.us-west-1.compute.amazonaws.com -i ~/.ssh/vfolio-media-server-large.pem'
-alias ssh-hk='ssh dfang@hk.ekohe.com'
 
 # snippets
 # cmap w!! %!sudo tee > /dev/null %
