@@ -78,8 +78,8 @@ alias -g ret='RAILS_ENV=test'
 
 alias rap="rake assets:precompile"
 alias capd="cap deploy"
-alias cppd="cap production deploy"
-alias cpsd="cap staging deploy"
+alias cappd="cap production deploy"
+alias capsd="cap staging deploy"
 
 alias reload="source ~/.zshrc"
 alias reload!="source ~/.zshrc"
