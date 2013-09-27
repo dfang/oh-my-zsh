@@ -1,6 +1,7 @@
 alias zshconfig="sb ~/.zshrc"
 alias ohmyzsh="sb ~/.oh-my-zsh"
 
+alias sl='ls'
 alias b='bundle'
 alias l="ls -alh"
 alias be='bundle exec'
