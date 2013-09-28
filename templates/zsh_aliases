@@ -149,3 +149,10 @@ alias 'dev'='cd ~/Development'
 # cmap w!! %!sudo tee > /dev/null %
 # sudo chown -R `whoami` /usr/local
 # rsync -av
+
+function mcd(){
+  echo "creating $1 directory"
+  mkdir $1
+  echo "then cd into it"
+  cd $1
+}
