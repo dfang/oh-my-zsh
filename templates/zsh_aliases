@@ -143,7 +143,7 @@ alias restart_dock="killall Dock"
 alias speedup='sudo rm /private/var/log/asl/＊.asl'
 
 # project alias, use autojump instead
-alias 'dev'='cd ~/Development'
+alias dev='cd ~/Development'
 
 # snippets
 # cmap w!! %!sudo tee > /dev/null %
@@ -151,8 +151,8 @@ alias 'dev'='cd ~/Development'
 # rsync -av
 
 function mcd(){
-  echo "creating $1 directory"
+  echo "make a new directory $1, then cd into it"
   mkdir $1
-  echo "then cd into it"
   cd $1
 }
+
