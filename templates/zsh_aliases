@@ -145,9 +145,19 @@ alias restart_dock="killall Dock"
 alias speedup='sudo rm /private/var/log/asl/＊.asl'
 
 # project alias, use autojump instead
-alias 'dev'='cd ~/Development'
+alias dev='cd ~/Development'
+
+alias ssh-alias='cat ~/.ssh_aliases'
+alias ssh-keys='ls -l ~/.ssh'
 
 # snippets
 # cmap w!! %!sudo tee > /dev/null %
 # sudo chown -R `whoami` /usr/local
 # rsync -av
+
+function mcd(){
+  echo "make a new directory $1, then cd into it"
+  mkdir $1
+  cd $1
+}
+
