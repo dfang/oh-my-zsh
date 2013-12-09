@@ -35,8 +35,8 @@ plugins=(git bundler brew gem knife history history-substring-search node npm bo
 # edit /etc/paths file manually, or amend path here
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 
-# export EDITOR='sb -w'
-export EDITOR='vim'
+# export EDITOR='vim'
+export EDITOR='sb -w'
 
 source $ZSH/oh-my-zsh.sh
 
@@ -44,10 +44,10 @@ source $ZSH/oh-my-zsh.sh
 
 [[ -f $HOME/.ssh_aliases ]] && source $HOME/.ssh_aliases
 
+# PATH for rbenv, it seems now brew-installed rbenv have this path,see env | grep PATH
+# export PATH="$HOME/.rbenv/shims:$PATH"
 # add support for Homebrew installed rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-#PATH for rbenv
-export PATH="$HOME/.rbenv/shims:$PATH"
 
 # add npm support
 export PATH="/usr/local/share/npm/bin:$PATH"

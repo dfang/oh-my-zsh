@@ -26,14 +26,31 @@ alias rgc='rails generate controller'
 alias rgh='rails generate helper'
 alias rgu='rails generate uploader'
 alias rdd="rake db:drop"
+alias zrdd="zeus rake db:drop"
 alias rdc="rake db:create"
+alias zrdc="zeus rake db:create"
 alias rdm="rake db:migrate"
+alias zrdm="zeus rake db:migrate"
 alias rdms="rake db:migrate:status"
 alias rdr="rake db:rollback"
+alias zrdr="zeus rake db:rollback"
 alias rds="rake db:seed"
+alias zrds="zeus rake db:seed"
 alias rdst='rake db:setup'
+alias zrdst='zeus rake db:setup'
 alias rdrst='rake db:reset'
+alias zrdrst='zeus rake db:reset'
 alias rkmw='rake middleware'
+alias zrkmw='zrake middleware'
+
+alias zrg='zeus rails g'
+alias zrk='zeus rake'
+alias zc='zeus c'
+alias zs='zeus s'
+alias zg='zeus g'
+alias zd='zeus d'
+alias zdb='zeus dbconsole'
+# zeus rake db:drop && zeus rake db:create && zeus rake db:migrate
 
 alias migrate='rake db:migrate; rake db:migrate RAILS_ENV=test'
 
@@ -79,8 +96,8 @@ alias -g ret='RAILS_ENV=test'
 
 alias rap="rake assets:precompile"
 alias capd="cap deploy"
-alias cppd="cap production deploy"
-alias cpsd="cap staging deploy"
+alias cappd="cap production deploy"
+alias capsd="cap staging deploy"
 
 alias reload="source ~/.zshrc"
 alias reload!="source ~/.zshrc"
@@ -88,8 +105,9 @@ alias :q='exit' # vim style quit
 alias cls='clear'
 
 # if not passing arguments , just ssh-copy-id default public key
-alias ssh-copy-id="ssh-copy-id -i ~/.ssh/id_rsa.pub $1"
-
+# alias ssh-copy-id="ssh-copy-id -i ~/.ssh/id_rsa.pub $1"
+# generate public key from private key and print it to stdout
+# ssh-keygen -y -f /path/to/private/key
 
 alias lf='ls *(.)' # list just files
 alias ld='ls *(/)' # list just directories *N*
