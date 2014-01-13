@@ -72,6 +72,7 @@ alias gd='git diff'
 alias gdw='git diff --word-diff'
 alias gdc='git diff --cached'
 alias gds='git diff --stat'
+alias gdh='git diff HEAD'
 alias gb='git branch'
 alias gba='git branch -a'
 alias gco='git checkout'
@@ -86,6 +87,10 @@ alias gsl='git stash list'
 alias gss='git stash save'
 alias gsp='git stash pop'
 
+alias grc='git rebase --continue'
+alias grs='git rebase --skip'
+alias gra='git rebase --abort'
+
 alias gitx='open -a GitX .'
 alias glast='git log -n 1'
 
@@ -96,6 +101,7 @@ alias -g ret='RAILS_ENV=test'
 
 alias rap="rake assets:precompile"
 alias capd="cap deploy"
+alias capdm="cap deploy:migrate"
 alias cappd="cap production deploy"
 alias capsd="cap staging deploy"
 
