@@ -15,6 +15,7 @@
   ba = branch --all
   co = checkout
   ci = commit
+  s = status
   st = status
   df = diff
   di = diff
