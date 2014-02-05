@@ -27,7 +27,7 @@ cp ~/.vimrc.bundles.local ~/.old_shit
 
 echo "\033[0;34mCopying custom dot files\033[0m"
 ln -sf ~/.oh-my-zsh/templates/zshrc  ~/.zshrc
-ln -sf ~/.oh-my-zsh/templates/aliases  ~/.aliases
+ln -sf ~/.oh-my-zsh/templates/zsh_aliases  ~/.zsh_aliases
 ln -sf ~/.oh-my-zsh/templates/gemrc  ~/.gemrc
 ln -sf ~/.oh-my-zsh/templates/railsrc  ~/.railsrc
 ln -sf ~/.oh-my-zsh/templates/gitconfig  ~/.gitconfig
