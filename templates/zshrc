@@ -54,13 +54,8 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 export PATH="/usr/local/share/npm/bin:$PATH"
 
 # add completion for aws cli
-source /usr/local/bin/aws_zsh_completer.sh
+[[ -f /usr/local/bin/aws_zsh_completer.sh ]] && source /usr/local/bin/aws_zsh_completer.sh
 export AWS_CONFIG_FILE="~/.AWS_Config"
-
-# add support for homebrew installed autojump
-[[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
-
-[[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
 
 # set PS1 in macvim, http://stackoverflow.com/questions/12942781/zsh-correct-shell-input-output-inside-vim-macvim
 if [[ $TERM == 'dumb' ]]; then

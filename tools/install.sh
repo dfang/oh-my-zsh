@@ -1,6 +1,11 @@
-if [ -d ~/.oh-my-zsh ]
+ZSH=`/usr/bin/env|grep 'ZSH='|cut -d '=' -f 2`
+if [ -d "$ZSH" ]
 then
-  echo "\033[0;33mYou already have Oh My Zsh installed.\033[0m You'll need to remove ~/.oh-my-zsh if you want to install"
+  echo "\033[0;33mYou already have Oh My Zsh installed.\033[0m You'll need to remove $ZSH if you want to install"
+  exit
+elif [ -d ~/.oh-my-zsh ]
+then
+  echo "\033[0;33mYou already have One Oh My Zsh Directory.\033[0m You'll need to remove  ~/.oh-my-zsh if you want to clone"
   exit
 fi
 
@@ -22,7 +27,7 @@ cp ~/.vimrc.bundles.local ~/.old_shit
 
 echo "\033[0;34mCopying custom dot files\033[0m"
 ln -sf ~/.oh-my-zsh/templates/zshrc  ~/.zshrc
-ln -sf ~/.oh-my-zsh/templates/aliases  ~/.aliases
+ln -sf ~/.oh-my-zsh/templates/zsh_aliases  ~/.zsh_aliases
 ln -sf ~/.oh-my-zsh/templates/gemrc  ~/.gemrc
 ln -sf ~/.oh-my-zsh/templates/railsrc  ~/.railsrc
 ln -sf ~/.oh-my-zsh/templates/gitconfig  ~/.gitconfig
@@ -33,8 +38,9 @@ echo "$ git config --global user.name 'John Doe'"
 echo "git config --global user.email johndoe@example.com"
 
 echo "\033[0;34mCopying your current PATH and adding it to the end of ~/.zshrc for you.\033[0m"
-echo " "
-echo "export PATH=\$PATH:$PATH" >> ~/.zshrc
+sed -i -e "/export PATH=/ c\\
+export PATH=\"$PATH\"
+" ~/.zshrc
 
 
 echo "\033[0;34mTime to change your default shell to zsh!\033[0m"
@@ -48,6 +54,7 @@ echo "\033[0;32m"'\____/_/ /_/  /_/ /_/ /_/\__, /    /___/____/_/ /_/  '"\033[0m
 echo "\033[0;32m"'                        /____/                       '"\033[0m"
 
 echo "\n\n \033[0;32m....is now installed.\033[0m"
+echo "\n\n \033[0;32mPlease look over the ~/.zshrc file to select plugins, themes, and options.\033[0m"
 /usr/bin/env zsh
 source ~/.zshrc
 
