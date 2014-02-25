@@ -1,6 +1,6 @@
 [user]
-  name = dfang
-  email = dfang@ekohe.com
+	name = dfang
+	email = dfang@ekohe.com
 [mergetool]
   keepBackup = true
 [color]
@@ -40,13 +40,13 @@
 [push]
   default = simple
 [core]
-  excludesfile = /Users/dfang/.gitignore_global
+	excludesfile = /Users/dfang/.gitignore_global
   pager = `brew --prefix git`/share/git-core/contrib/diff-highlight/diff-highlight | less
 [difftool "sourcetree"]
-  cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-  path =
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
 [mergetool "sourcetree"]
-  cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-  trustExitCode = true
+	cmd = /opt/homebrew-cask/Caskroom/sourcetree/1.8.0.3/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
 [branch]
   autosetuprebase = always
