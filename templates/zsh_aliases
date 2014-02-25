@@ -185,3 +185,11 @@ function mcd(){
   cd $1
 }
 
+# search in all bundled gems, very useful when hacking source code
+# http://stackoverflow.com/questions/20044173/there-a-way-to-search-all-bundled-gems-project-directories
+# http://andre.arko.net/2013/05/10/hack-your-bundle-for-fun-and-profit/
+# ags 'pattern'  search in bundled gem source code(source code in current project folder is not included)
+# ag 'pattern'  search only in current project
+function ags () {
+  ag "$@" `bundle show --paths`
+}
