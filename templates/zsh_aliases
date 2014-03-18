@@ -190,6 +190,9 @@ function mcd(){
 # http://andre.arko.net/2013/05/10/hack-your-bundle-for-fun-and-profit/
 # ags 'pattern'  search in bundled gem source code(source code in current project folder is not included)
 # ag 'pattern'  search only in current project
+# ag is case sensitive by default, so use -S(smart case)
 function ags () {
-  ag "$@" `bundle show --paths`
+  ag -S "$@" `bundle show --paths`
 }
+
+alias glo="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
