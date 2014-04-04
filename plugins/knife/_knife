@@ -20,7 +20,7 @@ knife_general_flags=( --help --server-url --key --config --editor --format --log
 _knife() {
   local curcontext="$curcontext" state line
   typeset -A opt_args
-  cloudproviders=(bluebox ec2 rackspace slicehost terremark)
+  cloudproviders=(bluebox ec2 rackspace slicehost terremark digital_ocean)
   _arguments \
     '1: :->knifecmd'\
     '2: :->knifesubcmd'\
@@ -59,6 +59,9 @@ _knife() {
     solo)
      compadd -Q "$@" init prepare cook bootstrap clean
     ;;
+    digital_ocean)
+     compadd -Q "$@" droplet image region size sshkey
+    ;;
     recipe)
      compadd "$@" list
     ;;
@@ -81,6 +84,12 @@ _knife() {
       compadd "$@" list create delete
     ;;
      images)
+      compadd "$@" list
+    ;;
+     droplet)
+      compadd "$@" create destroy list
+    ;;
+     (image|region|size|sshkey)
       compadd "$@" list
     ;;
      site)
