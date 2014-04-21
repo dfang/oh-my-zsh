@@ -11,6 +11,7 @@ alias r="rails"
 alias rk="rake"
 alias rs="rails s"
 alias ts='thin start'
+alias fs="foreman start"
 alias rc="rails c"
 alias rdb="rails db"
 alias rr="rake routes"
