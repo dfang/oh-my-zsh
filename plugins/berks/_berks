@@ -19,7 +19,7 @@ _1st_arguments=(
     'show:show [COOKBOOK]       # Display name, author, copyright, and dependency information about a cookbook'
     'update:update [COOKBOOKS]    # Update the cookbooks (and dependencies) specified in the Berksfile'
     'upload:upload [COOKBOOKS]    # Upload the cookbook specified in the Berksfile to the Chef Server'
-    'version:version              # Display version and copyright information'
+    'version:version               # Display version and copyright information'
 )
 
 # local -a _box_arguments
