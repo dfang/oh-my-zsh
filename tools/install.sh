@@ -15,29 +15,6 @@ hash git >/dev/null 2>&1 && env git clone --depth=1 https://github.com/dfang/oh-
   exit
 }
 
-<<<<<<< HEAD
-echo "\033[0;34mBacking up old shit dot files\033[0m"
-mkdir ~/.old_shit
-cp ~/.zshrc ~/.old_shit/
-cp ~/.aliases ~/.old_shit/
-cp ~/.railsrc ~/.old_shit/
-cp ~/.gemrc ~/.old_shit/
-cp ~/.gitconfig ~/.old_shit/
-cp ~/.vimrc ~/.old_shit
-cp ~/.vimrc.bundles.local ~/.old_shit
-
-echo "\033[0;34mCopying custom dot files\033[0m"
-ln -sf ~/.oh-my-zsh/templates/zshrc  ~/.zshrc
-ln -sf ~/.oh-my-zsh/templates/zsh_aliases  ~/.zsh_aliases
-ln -sf ~/.oh-my-zsh/templates/gemrc  ~/.gemrc
-ln -sf ~/.oh-my-zsh/templates/railsrc  ~/.railsrc
-ln -sf ~/.oh-my-zsh/templates/gitconfig  ~/.gitconfig
-ln -sf templates/vimrc  ~/.vimrc
-ln -sf templates/vimrc.bundles.local ~/.vimrc.bundles.local
-
-echo "$ git config --global user.name 'John Doe'"
-echo "git config --global user.email johndoe@example.com"
-=======
 echo "\033[0;34mLooking for an existing zsh config...\033[0m"
 if [ -f ~/.zshrc ] || [ -h ~/.zshrc ]; then
   echo "\033[0;33mFound ~/.zshrc.\033[0m \033[0;32mBacking up to ~/.zshrc.pre-oh-my-zsh\033[0m";
@@ -49,23 +26,16 @@ cp $ZSH/templates/zshrc.zsh-template ~/.zshrc
 sed -i -e "/^export ZSH=/ c\\
 export ZSH=$ZSH
 " ~/.zshrc
->>>>>>> upstream/master
 
 echo "\033[0;34mCopying your current PATH and adding it to the end of ~/.zshrc for you.\033[0m"
 sed -i -e "/export PATH=/ c\\
 export PATH=\"$PATH\"
 " ~/.zshrc
 
-<<<<<<< HEAD
-
-echo "\033[0;34mTime to change your default shell to zsh!\033[0m"
-chsh -s `which zsh`
-=======
 if [ "$SHELL" != "$(which zsh)" ]; then
     echo "\033[0;34mTime to change your default shell to zsh!\033[0m"
     chsh -s `which zsh`
 fi
->>>>>>> upstream/master
 
 echo "\033[0;32m"'         __                                     __   '"\033[0m"
 echo "\033[0;32m"'  ____  / /_     ____ ___  __  __   ____  _____/ /_  '"\033[0m"
@@ -78,3 +48,5 @@ echo "\n\n \033[0;32mp.s. Follow us at http://twitter.com/ohmyzsh.\033[0m"
 echo "\n\n \033[0;32mp.p.s. Get stickers and t-shirts at http://shop.planetargon.com.\033[0m"
 env zsh
 . ~/.zshrc
+
+echo "\033[0;34mNow you can install custom homesick castle .....\033[0m"
